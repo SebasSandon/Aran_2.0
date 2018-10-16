@@ -17,7 +17,8 @@ switch(state){
 		#region Estado persecusion
 		set_state_sprite(spr_mago,1,0);
 		if not instance_exists(obj_aran) break;
-		
+		audio_pause_sound(a_island_aeria);
+		audio_play_sound(a_music_boss,1,true);
 		image_xscale = sign(obj_aran.x - x);
 		if image_xscale == 0 {
 			image_xscale = 1;
